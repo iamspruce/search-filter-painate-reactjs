@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const request_headers = new Headers();
-    const api_key = "GIRIRMIPcgrNfvBIDP59n3O5hMMuY0e6ZZ4xEpQQ";
+    const api_key = "your_api_key";
     request_headers.append("Authorization", `Bearer ${api_key}`);
     request_headers.append("Content-Type", "application/json");
 
@@ -26,7 +26,6 @@ function App() {
         (result) => {
           setLoaded(true);
           setItems(result);
-          console.log(result);
         },
         (error) => {
           setLoaded(true);
